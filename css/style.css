@@ -79,8 +79,6 @@ a{
 }
 
 
-
-
 /*=======Light/Dark theme button=======*/
 .theme-btn{
   z-index: 999999;
@@ -149,7 +147,6 @@ a{
   list-style: none;
   display: flex;
   gap: 20px;
-  z-index: 1100;
 }
 
 .nav-links li {
@@ -177,10 +174,10 @@ a{
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .nav-links {
-    display: none; /* Hides it by default */
-    flex-direction: column; /* Stack items vertically */
+    display: none; 
+    flex-direction: column;
     position: absolute;
-    top: 60px; /* Adjust as needed */
+    top: 60px; 
     left: 0;
     width: 100%;
     background: #6a59d1;
@@ -189,7 +186,7 @@ a{
   }
 
   .nav-links.show {
-    display: flex; /* Change from block to flex */
+    display: flex; 
   }
 
   .nav-links li {
@@ -204,7 +201,7 @@ a{
 
 /* Home */
 .header__container {
-  padding-top: 80px; /* Adjust this value based on your navbar height */
+  padding-top: 80px; 
   text-align: center;
 }
 
@@ -235,10 +232,10 @@ a{
 /* Fix button alignment */
 .header__btns {
   display: flex;
-  justify-content: center; /* Center the buttons */
-  align-items: center; /* Ensure vertical alignment */
-  gap: 15px; /* Space between buttons */
-  margin-top: 1rem; /* Adds spacing from text */
+  justify-content: center;
+  align-items: center; 
+  gap: 15px; 
+  margin-top: 1rem; 
 }
 
 /* Button Styling */
@@ -246,9 +243,9 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px; /* Keep circular shape */
+  width: 50px; 
   height: 50px;
-  background-color: #6a59d1; /* LinkedIn blue */
+  background-color: #6a59d1; 
   color: white;
   border-radius: 50%;
   font-size: 24px;
@@ -269,12 +266,12 @@ a{
 /* Responsive: Ensure buttons remain centered */
 @media screen and (max-width: 600px) {
   .header__btns {
-    flex-wrap: wrap; /* Prevents breaking alignment */
-    gap: 10px; /* Reduces spacing slightly */
+    flex-wrap: wrap; 
+    gap: 10px;
   }
 
   .header__btns .btn {
-    width: 45px; /* Slightly smaller for smaller screens */
+    width: 45px; 
     height: 45px;
     font-size: 20px;
   }
@@ -289,7 +286,7 @@ a{
   }
 
   .home-container .home-img {
-    order: -1; /* Move image to the top */
+    order: -1; 
     display: flex;
     justify-content: center;
     width: 100%;
@@ -315,7 +312,7 @@ a{
   }
 
   .home-container .home-img {
-    order: -1; /* Move image to the top */
+    order: -1;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -646,6 +643,8 @@ a{
   width: 80%;
 }
 
+
+
 .experience-card{
   background: var(--card-bg-color);
   border-bottom: 3px solid var(--second-color);
@@ -685,17 +684,22 @@ a{
   transform: scale(1.03);
 }
 
+
+.edu-list .item:hover, .bar:hover, .experience-card:hover{
+  transform: scale(1.03);
+}
+
 /* Hide bullet points for all lists in the skills section */
 .skills ul {
   list-style-type: none;
-  padding-left: 0; /* Optional: Remove any left padding */
+  padding-left: 0; 
 }
 
 /* Hide bullet points for the specific list classes */
 .skills .edu-list,
 .skills .bars {
   list-style-type: none;
-  padding-left: 0; /* Optional: Remove any left padding */
+  padding-left: 0; 
 }
 
 
@@ -852,7 +856,7 @@ a{
 .portfolio-model-body {
   position: relative;
   padding: 20px;
-  min-height: 250px; /* Ensures enough space for the button */
+  min-height: 250px; 
 }
 @media screen and (max-width: 600px) {
   .github-btn {
@@ -940,9 +944,9 @@ a{
 .swiper-button-next, .swiper-button-prev {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); /* Center arrows vertically */
-  z-index: 10; /* Make sure arrows are above content */
-  padding: 10px; /* Add some padding for better hit area */
+  transform: translateY(-50%); 
+  z-index: 10; 
+  padding: 10px; 
 }
 
 /* Position the next arrow to the far right */
@@ -958,7 +962,7 @@ a{
 /* Adjust arrows for smaller screens */
 @media (max-width: 600px) {
   .swiper-button-next, .swiper-button-prev {
-    padding: 15px; /* Increase padding for easier interaction */
+    padding: 15px; 
   }
 }
 
@@ -1053,25 +1057,25 @@ a{
 }
 
 ul.work-experience {
-  list-style-type: disc !important; /* Ensures bullets are displayed */
+  list-style-type: disc !important;
   margin-left: 20px;
 }
 
 /* If there's a more general rule for lists, we can override it here */
 ul.work-experience li {
-  list-style: disc !important; /* Enforces bullet points */
+  list-style: disc !important; 
   margin-bottom: 10px;
 }
 
 /* Ensure bullet points appear in the Our Clients section */
 .service-modal-body ul {
-  list-style-type: disc; /* or circle/square */
-  padding-left: 20px; /* Ensures indentation */
+  list-style-type: disc; 
+  padding-left: 20px; 
 }
 
 .service-modal-body ul li {
   margin-top: 15px;
-  display: list-item; /* Ensures list item behavior */
+  display: list-item; 
 }
 
 /* Clients Section Title Styles */
@@ -1092,36 +1096,36 @@ ul.work-experience li {
 
 /* Clients Section Styles */
 .clients-section ul {
-  list-style-type: disc !important; /* Forces bullet points */
+  list-style-type: disc !important; 
   margin-left: 40px;
-  padding-left: 20px; /* Ensures spacing */
+  padding-left: 20px; 
 }
 
 .clients-section li {
-  display: list-item !important; /* Ensures bullets appear */
+  display: list-item !important; 
 }
 
 
 .client-details ul {
-  list-style-type: disc !important; /* Ensures bullet points */
-  margin-left: 20px; /* Adjusts spacing */
-  padding-left: 20px; /* Ensures bullets have enough space */
-  display: block; /* Ensures the list displays correctly */
+  list-style-type: disc !important; 
+  margin-left: 20px; 
+  padding-left: 20px; 
+  display: block;
 }
 
 .client-details li {
-  display: list-item !important; /* Forces list style */
-  margin-bottom: 10px; /* Adds space between list items */
+  display: list-item !important; 
+  margin-bottom: 10px; 
   
 }
 
 footer {
   width: 100%;
-  background-color: #6a59d1; /* Dark background */
+  background-color: #6a59d1;
   color: white;
   text-align: center;
   padding: 15px 0;
-  position: relative; /* Adjust as needed */
+  position: relative; 
   bottom: 0;
 }
 
@@ -1145,7 +1149,7 @@ footer {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #614fd0; /* LinkedIn blue */
+  background-color: #614fd0;
   color: white;
   border-radius: 50%;
   font-size: 20px;

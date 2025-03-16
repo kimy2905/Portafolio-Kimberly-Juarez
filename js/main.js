@@ -81,17 +81,6 @@ if(savedTheme){
     themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("sun");
 }
 
-//Scroll to top button
-const scrollTopBtn = document.querySelector(".scrollToTop-btn");
-
-window.addEventListener("scroll", function(){
-    scrollTopBtn.classList.toggle("active", window.scrollY > 500);
-});
-
-scrollTopBtn.addEventListener("click", () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-});
 
 //Navigation menu items active on page scroll
 window.addEventListener("scroll", () => {
@@ -102,15 +91,22 @@ window.addEventListener("scroll", () => {
         let sectionHeight = current.offsetHeight;
         let sectionTop = current.offsetTop - 50;
         let id = current.getAttribute("id");
-        
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector(".nav-items a[href*=" + id + "]").classList.add("active");
-        }
-        else{
-            document.querySelector(".nav-items a[href*=" + id + "]").classList.remove("active");
+
+        const navItem = document.querySelector(".nav-links a[href*='" + id + "']");
+
+        console.log("Section ID: ", id);
+        console.log("Matching nav item: ", navItem);
+
+        if (navItem) {
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                navItem.classList.add("active");
+            } else {
+                navItem.classList.remove("active");
+            }
         }
     });
 });
+
 
 //Responsive navigation menu toggle
 document.addEventListener("DOMContentLoaded", function () {
@@ -164,22 +160,22 @@ ScrollReveal().reveal('footer .group', { delay: 500, origin: 'top', interval: 20
 
 document.addEventListener("DOMContentLoaded", function () {
     const headerContainer = document.querySelector(".header__container"); 
-    let h1 = document.querySelector("h1"); // Select existing h1 or create if not found
+    let h1 = document.querySelector("h1"); 
 
     if (!h1) {
-        h1 = document.createElement("h1"); // Create h1 only if it doesn't exist
+        h1 = document.createElement("h1"); 
         headerContainer.insertBefore(h1, headerContainer.children[1]);
     }
 
     const text = "Hi, I'm Kimberly!";
     let index = 0;
-    const speed = 100; // Typing speed in milliseconds
+    const speed = 100;
 
-    h1.innerText = ""; // Ensure it's empty before typing starts
+    h1.innerText = ""; 
 
     function typeEffect() {
         if (index < text.length) {
-            h1.innerHTML += text.charAt(index); // Add each character one by one
+            h1.innerHTML += text.charAt(index); 
             index++;
             setTimeout(typeEffect, speed);
         }
